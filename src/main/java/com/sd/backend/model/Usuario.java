@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.OffsetDateTime;
 
 import jakarta.validation.constraints.NotBlank;
 
@@ -17,7 +16,7 @@ import jakarta.validation.constraints.NotBlank;
 @AllArgsConstructor
 @Entity
 @Table(name = "tb_category")
-public class Paciente implements Serializable {
+public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -28,7 +27,7 @@ public class Paciente implements Serializable {
     private String nome;
 
     @NotBlank(message = "Campo Data de Nascimento é obrigatório")
-    private OffsetDateTime dataNascimento;
+    private String dataNascimento;
 
     @NotBlank(message = "Campo sexo é obrigatório")
     private String sexo;
@@ -44,7 +43,4 @@ public class Paciente implements Serializable {
     private Boolean alimentacao;
 
     private String descricaoSintomas;
-
-    @OneToOne(mappedBy = "paciente")
-    private Consulta consulta;
 }
