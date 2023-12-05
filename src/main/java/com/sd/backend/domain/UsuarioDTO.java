@@ -1,23 +1,22 @@
 package com.sd.backend.domain;
 
-import com.sd.backend.model.Paciente;
+import com.sd.backend.model.Usuario;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.OffsetDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PacienteDTO implements Serializable {
+public class UsuarioDTO implements Serializable {
 
     private Long id;
 
     private String nome;
 
-    private OffsetDateTime dataNascimento;
+    private String dataNascimento;
 
     private String sexo;
 
@@ -33,7 +32,7 @@ public class PacienteDTO implements Serializable {
 
     private String descricaoSintomas;
 
-    public PacienteDTO(Paciente paciente) {
+    public UsuarioDTO(Usuario paciente) {
         this.id = paciente.getId();
         this.nome = paciente.getNome();
         this.dataNascimento = paciente.getDataNascimento();
