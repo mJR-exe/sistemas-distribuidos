@@ -44,3 +44,33 @@ Siga as etapas abaixo para configurar o projeto localmente:
 
 ## Exemplo de Criação de Usuário
 ![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/60d4c0c5-24d5-47f6-8078-690745228969)
+
+## Arquitetura da Aplicação.
+A aplicação foi construída com a arquitetura MVC(Model View Controler).
+
+### Model(Modelo):
+Representa os dados e a lógica de negócios da aplicação. Ele é responsável por acessar e manipular os dados, bem como validar e aplicar as regras de negócios. O modelo notifica as mudanças aos observadores interessados (geralmente os controladores).
+
+### View (Visão): 
+É responsável por apresentar os dados ao usuário e interpretar as interações do usuário. A visão exibe a informação proveniente do modelo e encaminha as ações do usuário para o controlador.
+
+### Controller (controlador)
+Atua como intermediário entre o modelo e a visão. Ele recebe as entradas do usuário da visão, processa essas entradas (geralmente alterando o estado do modelo) e atualiza a visão para refletir as mudanças no modelo. O controlador também pode receber notificações do modelo sobre alterações nos dados e atualizar a visão conforme necessário.
+
+### Camadas
+As camadas existentes nessa arquitetura são: 
+
+#### Controller
+Responsável por receber as solicitações do usuário (entrada), interpretá-las e chamar os serviços apropriados para lidar com essas solicitações.
+
+#### Service
+Contém a lógica de negócios da aplicação. Ele é responsável por processar as solicitações recebidas pelos controladores, interagir com os repositórios para acessar os dados e aplicar as regras de negócios.
+
+#### Repository
+Gerencia o acesso aos dados persistentes, como um banco de dados. Ele fornece uma abstração sobre o armazenamento de dados, permitindo que o serviço se concentre na lógica de negócios, sem se preocupar com os detalhes de armazenamento.
+
+#### Entidade
+Representa a estrutura de dados no banco de dados. É frequentemente mapeada para uma tabela no banco de dados relacional. A entidade é geralmente uma representação direta dos dados armazenados.
+
+#### DTO (Data Transfer Object)
+É uma representação dos dados que será transferida entre as camadas. Os DTOs são usados para evitar que as entidades do banco de dados sejam expostas diretamente nas camadas superiores e para fornecer uma estrutura de dados específica para as necessidades da camada de apresentação.
