@@ -9,7 +9,7 @@ Este é um sistema de cadastro de usuário, simulando o mesmo como se fosse um p
 
 Antes de começar, verifique se você possui as seguintes ferramentas instaladas:
 
-- Java Development Kit (JDK) 17: [Download]((https://www.openlogic.com/openjdk-downloads))
+- Java Development Kit (JDK) 17: [Download](https://www.openlogic.com/openjdk-downloads)
 - Maven: [Download](https://maven.apache.org/download.cgi)
 - Git: [Download](https://git-scm.com/downloads)
 - Postman: [Download](https://www.postman.com/downloads/)
