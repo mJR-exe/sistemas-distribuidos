@@ -28,6 +28,7 @@ Siga as etapas abaixo para configurar o projeto localmente:
 - Buscar todos os usuários: GET - http://localhost:8080/usuario
 - Buscar um usuário por id: GET - http://localhost:8080/usuario/{id}, no caso você deverá passar um id existente, como por exemplo http://localhost:8080/usuario/1
 - Criar um usuário: POST - http://localhost:8080/usuario, você precisará passar os seguintes dados para criar o usuário:
+```json
 {
   "nome": "Teste de criação",
   "dataNascimento": "17/03/2000",
@@ -39,6 +40,7 @@ Siga as etapas abaixo para configurar o projeto localmente:
   "alimentacao": "true",
   "descricaoSintomas": "Possuo nenhum sintomas"
 }
+```
 - Deletar um usuário por id: DELETE - http://localhost:8080/usuario/{id}, no caso você deverá passar um id existente, como por exemplo http://localhost:8080/usuario/1
 - Atualizar um usuário por id: PUT - http://localhost:8080/usuario/{id}, no caso você deverá passar um id existente, como por exemplo http://localhost:8080/usuario/1
 
