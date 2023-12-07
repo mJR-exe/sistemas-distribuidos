@@ -1,8 +1,8 @@
 package com.sd.backend.service;
 
-import com.sd.backend.domain.UsuarioDTO;
-import com.sd.backend.model.Usuario;
-import com.sd.backend.repository.UsuarioRepository;
+import com.sd.backend.domain.PacienteDTO;
+import com.sd.backend.model.Paciente;
+import com.sd.backend.repository.PacienteRepository;
 import com.sd.backend.service.exceptions.DatabaseException;
 import com.sd.backend.service.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
@@ -17,39 +17,39 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class UsuarioService {
+public class PacienteService {
 
     @Autowired
-    private UsuarioRepository repository;
+    private PacienteRepository repository;
 
     @Transactional(readOnly = true)
-    public Page<UsuarioDTO> findAllPaged(Pageable pageable){
-        Page<Usuario> list = repository.findAll(pageable);
-        return list.map(UsuarioDTO::new);
+    public Page<PacienteDTO> findAllPaged(Pageable pageable){
+        Page<Paciente> list = repository.findAll(pageable);
+        return list.map(PacienteDTO::new);
     }
 
     @Transactional(readOnly = true)
-    public UsuarioDTO findById(Long id) {
-        Optional<Usuario> obj = repository.findById(id);
-        Usuario entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
-        return new UsuarioDTO(entity);
+    public PacienteDTO findById(Long id) {
+        Optional<Paciente> obj = repository.findById(id);
+        Paciente entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
+        return new PacienteDTO(entity);
     }
 
     @Transactional
-    public UsuarioDTO insert(UsuarioDTO dto) {
-        Usuario entity = new Usuario();
+    public PacienteDTO insert(PacienteDTO dto) {
+        Paciente entity = new Paciente();
         copyDtoToEntity(dto, entity);
         entity = repository.save(entity);
-        return new UsuarioDTO(entity);
+        return new PacienteDTO(entity);
     }
 
     @Transactional
-    public UsuarioDTO update(Long id, UsuarioDTO dto) {
+    public PacienteDTO update(Long id, PacienteDTO dto) {
         try {
-            Usuario entity = repository.getOne(id);
+            Paciente entity = repository.getOne(id);
             copyDtoToEntity(dto, entity);
             entity = repository.save(entity);
-            return new UsuarioDTO(entity);
+            return new PacienteDTO(entity);
         }
         catch (EntityNotFoundException e) {
             throw new ResourceNotFoundException("Id not found " + id);
@@ -68,7 +68,7 @@ public class UsuarioService {
         }
     }
 
-    private void copyDtoToEntity(UsuarioDTO dto, Usuario entity) {
+    private void copyDtoToEntity(PacienteDTO dto, Paciente entity) {
         entity.setNome(dto.getNome());
         entity.setDataNascimento(dto.getDataNascimento());
         entity.setSexo(dto.getSexo());
