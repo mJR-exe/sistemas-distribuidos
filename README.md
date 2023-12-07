@@ -11,7 +11,16 @@ Antes de começar, verifique se você possui as seguintes ferramentas instaladas
 - Postman: [Download](https://www.postman.com/downloads/)
 
 ## Criação do projeto
-  ![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/69aa22c1-87f5-4c94-ae7b-9d2b6be8345a)
+O Spring Initializr é uma ferramenta online que facilita a criação de projetos Spring Boot com configurações iniciais personalizadas. Para criar um projeto usando o Spring Initializr, siga estas etapas:
+
+1. Acesse o Spring Initializr: Vá para o site https://start.spring.io/.
+2. Configure o projeto: No lado esquerdo da página, você verá opções para configurar o seu projeto.
+3. Gerar o projeto: Após configurar as opções conforme necessário, clique no botão "Generate" na parte inferior da página. Isso fará o download de um arquivo compactado (como um arquivo ZIP) contendo o esqueleto do seu projeto.
+4. Descompacte o arquivo: Descompacte o arquivo ZIP baixado em um diretório de sua escolha.
+5. Importe o projeto em sua IDE: Abra sua IDE e importe o projeto.
+6. Execute o aplicativo: Agora que o projeto está importado na sua IDE, procure a classe principal que contém o método main e execute-o. Isso iniciará seu aplicativo Spring Boot.
+
+![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/69aa22c1-87f5-4c94-ae7b-9d2b6be8345a)
 
 ## Configuração
 
