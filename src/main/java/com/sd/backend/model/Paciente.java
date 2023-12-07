@@ -15,8 +15,8 @@ import jakarta.validation.constraints.NotBlank;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tb_category")
-public class Usuario implements Serializable {
+@Table(name = "tb_paciente")
+public class Paciente implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
