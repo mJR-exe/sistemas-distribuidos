@@ -23,9 +23,9 @@ Siga as etapas abaixo para configurar o projeto localmente:
 - É possível acessar os endpoints do projeto por linha de comando ou por qualquer outra plataforma de API, como o Postman, que foi utilizado em nosso trabalho.
 
 ## Endpoints
-- **GET**: Buscar todos os usuários - http://localhost:8080/usuario
-- **GET**: Buscar um usuário por id - http://localhost:8080/usuario/{id}. Deve-se passar um id existente, como por exemplo http://localhost:8080/usuario/1
-- **POST**: Criar um usuário - http://localhost:8080/usuario. Deve-se passar dados com os seguintes atributos para criar o usuário:
+- **GET**: Buscar todos os pacientes - http://localhost:8080/paciente
+- **GET**: Buscar um paciente por id - http://localhost:8080/paciente/{id}. Deve-se passar um id existente, como por exemplo http://localhost:8080/paciente/1
+- **POST**: Criar um paciente - http://localhost:8080/paciente. Deve-se passar dados com os seguintes atributos para criar o paciente:
 ```json
 {
   "nome": "Teste de criação",
@@ -39,8 +39,8 @@ Siga as etapas abaixo para configurar o projeto localmente:
   "descricaoSintomas": "Nenhum sintoma"
 }
 ```
-- **DELETE**: Deletar um usuário por id - http://localhost:8080/usuario/{id}. Deve-se passar um id existente, como por exemplo http://localhost:8080/usuario/1
-- **PUT**: Atualizar um usuário por id - http://localhost:8080/usuario/{id}. Deve-se passar um id existente e o campo a ser atualizado no body da requisição, como por exemplo http://localhost:8080/usuario/1
+- **DELETE**: Deletar um paciente por id - http://localhost:8080/paciente/{id}. Deve-se passar um id existente, como por exemplo http://localhost:8080/paciente/1
+- **PUT**: Atualizar um paciente por id - http://localhost:8080/usuario/{id}. Deve-se passar um id existente e o campo a ser atualizado no body da requisição, como por exemplo http://localhost:8080/paciente/1
 ```json
 {
   "nome": "Teste Sistemas Distribuídos",
