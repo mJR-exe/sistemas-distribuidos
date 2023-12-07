@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "68279dff-172a-4e33-8103-aea0cf713aea",
+		"name": "BackendSD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19596833"
+	},
+	"item": [
+		{
+			"name": "Busca usuário por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/usuario/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Gabriel Fernandes\",\r\n  \"dataNascimento\": \"17/03/2000\",\r\n  \"sexo\": \"Masculino\",\r\n  \"fuma\": \"false\",\r\n  \"bebe\": \"true\",\r\n  \"praticaExercicio\": \"true\",\r\n  \"infartou\": \"false\",\r\n  \"alimentacao\": \"true\",\r\n  \"descricaoSintomas\": \"Possuo nenhum sintomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete usuário por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Teste do delete\",\r\n  \"dataNascimento\": \"17/03/2000\",\r\n  \"sexo\": \"Masculino\",\r\n  \"fuma\": \"false\",\r\n  \"bebe\": \"true\",\r\n  \"praticaExercicio\": \"true\",\r\n  \"infartou\": \"false\",\r\n  \"alimentacao\": \"true\",\r\n  \"descricaoSintomas\": \"Possuo nenhum sintomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/usuario/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza informacoes do usuario por id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Teste do delete\",\r\n  \"dataNascimento\": \"17/03/2000\",\r\n  \"sexo\": \"F\",\r\n  \"fuma\": \"false\",\r\n  \"bebe\": \"true\",\r\n  \"praticaExercicio\": \"true\",\r\n  \"infartou\": \"false\",\r\n  \"alimentacao\": \"true\",\r\n  \"descricaoSintomas\": \"Possuo nenhum sintomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/usuario/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Busca todos os usuários Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/usuario"
+			},
+			"response": []
+		}
+	]
+}

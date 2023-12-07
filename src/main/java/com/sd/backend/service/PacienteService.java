@@ -31,7 +31,7 @@ public class PacienteService {
     @Transactional(readOnly = true)
     public PacienteDTO findById(Long id) {
         Optional<Paciente> obj = repository.findById(id);
-        Paciente entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
+        Paciente entity = obj.orElseThrow(() -> new ResourceNotFoundException("Paciente não encontrado."));
         return new PacienteDTO(entity);
     }
 
@@ -52,7 +52,7 @@ public class PacienteService {
             return new PacienteDTO(entity);
         }
         catch (EntityNotFoundException e) {
-            throw new ResourceNotFoundException("Id not found " + id);
+            throw new ResourceNotFoundException("Id não encontrado:  " + id);
         }
     }
 
@@ -61,10 +61,10 @@ public class PacienteService {
             repository.deleteById(id);
         }
         catch (EmptyResultDataAccessException e) {
-            throw new ResourceNotFoundException("Id not found " + id);
+            throw new ResourceNotFoundException("Id não encontrado:  " + id);
         }
         catch (DataIntegrityViolationException e) {
-            throw new DatabaseException("Integrity violation");
+            throw new DatabaseException("Integridade violada.");
         }
     }
 
