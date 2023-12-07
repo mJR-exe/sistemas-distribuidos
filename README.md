@@ -10,7 +10,7 @@ Antes de começar, verifique se você possui as seguintes ferramentas instaladas
 - Git: [Download](https://git-scm.com/downloads)
 - Postman: [Download](https://www.postman.com/downloads/)
 
-## Como foi criado o projeto!!
+## Criação do projeto
   ![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/69aa22c1-87f5-4c94-ae7b-9d2b6be8345a)
 
 ## Configuração
