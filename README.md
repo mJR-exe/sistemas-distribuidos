@@ -48,7 +48,7 @@ Siga as etapas abaixo para configurar o projeto localmente:
 ```
 
 ## Imagem do Projeto sendo executado
-![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/6c4d6d11-d642-42a5-81d9-e69a89e4ab91)
+![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/e74777f6-de06-4311-8bed-1b42d024d53d)
 
 ## Exemplo de Criação de Usuário
 ![image](https://github.com/mJR-exe/sistemas-distribuidos/assets/55205777/60d4c0c5-24d5-47f6-8078-690745228969)
